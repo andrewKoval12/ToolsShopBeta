@@ -1,5 +1,6 @@
 package ua.com.foxminded.toolsshop;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,10 @@ public class PerforatorDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perforator_detail);
 
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.hide();
+        }
         textViewPerforatorTitle = findViewById(R.id.textViewTitlePerforatorDetail);
         textViewPerforatorInfo = findViewById(R.id.textViewInfoPerforatorDetail);
         imageViewPerforatorImg = findViewById(R.id.imageViewPerforatorDetail);

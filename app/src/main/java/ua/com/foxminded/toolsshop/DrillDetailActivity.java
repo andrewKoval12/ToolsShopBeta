@@ -1,5 +1,6 @@
 package ua.com.foxminded.toolsshop;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +17,11 @@ public class DrillDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drill_deteil);
+
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.hide();
+        }
         imageViewDrill = findViewById(R.id.imageViewDrills  );
         textViewDrillInfo = findViewById(R.id.textViewDrillInfo);
         textViewTitle = findViewById(R.id.textViewTitle);

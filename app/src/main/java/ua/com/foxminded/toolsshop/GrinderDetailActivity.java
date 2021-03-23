@@ -1,9 +1,11 @@
 package ua.com.foxminded.toolsshop;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,10 @@ public class GrinderDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grinder_detail);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.hide();
+        }
 
         imageViewGrinder = findViewById(R.id.imageViewGrinderDetail);
         textViewGrinderTitle = findViewById(R.id.textViewGrinderTitle);
